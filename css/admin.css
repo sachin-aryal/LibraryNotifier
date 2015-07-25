@@ -1,0 +1,143 @@
+div#buttonWraper {
+    margin-top: 10px;
+    display: inline-block;
+    margin-left: 6px;;
+}
+.ui.basic.button {
+    width: 170px;
+}
+#first-child
+{
+    top:0;
+    left:0;
+    height: 0px;
+}
+
+.big-box
+{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    color:white;
+}
+.big-box h2
+{
+    text-align: center;
+    margin-top: 20%;
+    padding: 20px;
+    width: 100%;
+    font-size: 1.8em;
+    letter-spacing: 2px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor:pointer;
+}
+
+@media screen and (max-width: 46.5em)
+{
+    .big-box h2
+    {
+        font-size:16px;
+
+        padding-left:0px;
+
+
+    }
+}
+
+@media screen and (max-width: 20.5em)
+{
+    .big-box h2
+    {
+        font-size:12px;
+        padding-left:0px;
+        margin-top:30%;
+    }
+}
+.modal-dialog {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin:0;
+}
+.modal-content {
+
+    height: 100%;
+    border-radius: 0;
+    color:white;
+    overflow:auto;
+}
+.modal-title
+{
+    font-size: 3em;
+    font-weight: 300;
+    margin: 0 0 20px 0;
+}
+.modal-content-one
+{
+    background-color:yellowgreen;
+}
+{
+/*noinspection CssUnknownProperty*/
+    background-color:#E6537D;
+}
+{
+/*noinspection CssUnknownProperty*/
+    background-color:crimson;
+}
+{
+/*noinspection CssUnknownProperty*/
+    background-color:lightseagreen;
+}
+view sourceprint
+.close
+{
+    color:white ! important;
+    opacity:1.0;
+}
+.modal-content-one {
+    background: #fafafa;
+    box-shadow: 2px 2px 2px #ddd;
+    margin-top: 100px;
+    height: 510px;
+}
+fieldset label {
+    line-height: 20px;
+    margin-top: 8px;
+}
+fieldset{
+    color: grey;
+}
+.modal-header {
+    padding: 15px;
+    border-bottom: 1px solid rgb(124, 128, 128);
+    min-height: 16.42857143px;
+    background-color: #e5e5e5;
+}
+.form-signin #form-control {
+    position: relative;
+    height: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+#form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555;
+    background-color: #FFF;
+    background-image: none;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+div#saveSuccess,div#saveFailed {
+    margin: 0px auto;
+    width: 290px;
+}
+

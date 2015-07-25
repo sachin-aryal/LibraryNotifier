@@ -1,0 +1,197 @@
+div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+
+#mainWrapper {
+    min-height: 100%;
+    position: relative;
+}
+header {
+    background: #1c4877;
+    padding: 7px 0;
+    overflow: hidden;
+}
+
+footer {
+    width: 100%;
+    height: 20px;
+    padding: 5px 0px;
+    bottom: 2px;
+    left: 0;
+    background: #444;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 20;
+
+}
+footer p{
+    line-height: 10px;
+}
+.navbar-default {
+    background: #1c4877;
+    border-color: #e7e7e7;
+    height: 100px;
+}
+.navbar-default {
+    color: #FFF;
+    font-size: 30px;
+    margin:0px auto
+}
+.img-rounded {
+    border-radius: 6px;
+    margin-top: 15px;
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+    margin-bottom: 10px;
+}
+.form-signin .checkbox {
+    font-weight: normal;
+}
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+h1.sub.header {
+    margin-top: 80px;
+    margin-left: -246px;
+    font-size: 37px;
+}
+.navbar-header.pull-right {
+    margin-right: 10px;
+    margin-top: 45px;
+}
+
+#headerWrapper {
+    max-width: 344px;
+}
+
+header {
+    background: #1c4877;
+    padding: 7px 0;
+    overflow: hidden;
+}
+#logo {
+    float: left;
+}
+body, html {
+    font-family: Georgia, sans-serif;
+    font-size: 16px;
+    /*background-image: url("../images/background.jpg");*/
+    color: #000;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+div, dl, dt, dd, ul, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+a.ui-link:hover {
+    color: #006794;
+    text-decoration: underline;
+}
+a.ui-link {
+    color: #1C8AE5;
+    text-decoration: none;
+}
+#logo {
+    float: left;
+}
+#welcomeMessage h1 {
+    font-size: 20px;
+    float: right;
+    color: #ffffff;
+}
+
+#prName1 {
+    margin: -42px 0px 0px 356px;
+    display: inline-block;
+    color: #fff;
+    font-family: inherit;
+    width: 240px;
+}
+#prName1 h1{
+    font-size: 34px;
+    color:#FFF;
+}
+#mainWrapper {
+    min-height: 100%;
+    position: relative;
+}
+#container {
+    margin: 0 auto;
+    background: #fff;
+    width: 960px;
+    border: 1px solid #ddd;
+    padding: 0px 0px 20px 0px;/*Padding: Bottom Height of the footer element */
+}
+
+/* Login -------------------------------------------------------
+ */
+.loginForm {
+    padding: 10px;
+    width: 500px;
+    margin: 0 auto;
+    position: relative;
+    height: 210px;
+}
+
+.loginFormInside {
+    padding: 10px;
+}
+.loginFormInside input {
+    padding: 5px;
+    width: 95%;
+}
+.loginFormInside input[type="submit"] {
+    background: green;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    width: 98%;
+}
+p.warn {
+    color: red;
+    font-style: italic;
+}
+.msgBox{
+    background-color: ghostwhite;
+}
+div.msgBoxContent{
+    margin-top:46px;
+}
+
+/* Nav -------------------------------------------------------
+ * http://www.bloggermint.com/2011/06/pure-css3-multi-level-drop-down-navigation-menu/
+ */
+
+/* Now we’ll start to give the skin to that skeleton of links (stylize) with CSS. Here is the basic CSS code for the menu. */
+
