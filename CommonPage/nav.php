@@ -1,18 +1,27 @@
+<?php
+session_start();
+checkUser($_SESSION["Username"])
+?>
 
-<div class="ui five item menu">
-    <a class="active item" href="../control/admin.php" id="home">
+<div class="ui four item menu" style="background-color: #3573A3">
+    <a class="item" href="../control/admin.php" id="home"><i class="home icon"></i>
         Home
     </a>
     <a class="item" data-toggle="modal" data-target="#modal1" id="popUp" id="addPopUp">
-        <i class="add circle icon"></i>Add Details
+        <i class="plus icon"></i>Add Details
     </a>
-    <a class="item" href="../control/nData.php" id="newData">New Data</a>
-    <a class="item" href="../control/oData.php" id="oldData">Old Data</a>
-    <a class="item" href="#">
-        Logout
+
+        <div class="ui simple dropdown item">
+            <i class="align justify icon"></i>
+            Show Details
+            <i class="dropdown icon"></i>
+            <div class="menu">
+                <div class="item" ><a class="item" href="../control/nData.php" id="newData"><i class="list icon"></i>New Data</a></div>
+                <div class="item" > <a class="item" href="../control/oData.php" id="oldData"><i class="list icon"></i>Old Data</a></div>
+            </div>
+        </div>
+    <a class="item" href="../control/logout.php">
+      <i class="power icon"></i>  Logout
     </a>
 
 </div>
-<?php
-checkUser($_SESSION["Username"])
-?>

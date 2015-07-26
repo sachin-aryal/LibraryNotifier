@@ -39,6 +39,9 @@ footer p{
     font-size: 30px;
     margin:0px auto
 }
+#home{
+    color: black;
+}
 .img-rounded {
     border-radius: 6px;
     margin-top: 15px;

@@ -1,17 +1,10 @@
-<html>
-<head>
-</head>
-<body>
 
-
-<div id="dialog-confirm">
-
-</div>
 <div class="table-responsive">
     <?php
+    require_once '../CommonPage/initializer.php';
     if($_POST) {
         $conn=mysqli_connect('localhost','root','phenol69','LibraryNotifier');
-        error_reporting(E_ERROR);
+
         $dueDate = $_POST['search'];
         $start=0;
         $limit=6;
@@ -111,21 +104,16 @@
 
     }
     ?>
+    <div id="allButton">
+        <a class="ui primary button" href="editAllSpecific.php?specificDueDate=<?php echo $dueDate  ?>">Edit All&nbsp;&nbsp;<span class='glyphicon glyphicon-edit' aria-hidden='true'></a>
+        <form  method="get" action="delete.php" style="float:right">
+            <input type="hidden" name="deleteItem" value="<?php echo $dueDate; ?>"/>
+            <button onclick="return confirm('Are you sure?');" type="submit" class='ui button'>Delete All&nbsp;&nbsp;<span class='glyphicon glyphicon-remove' aria-hidden='true'></button>
+        </form>
+    </div>
+
     </th>
     </tr>
     </tfoot>
     </table>
 </div>
-<!--<div id="dialog" title="Alert message" style="display: none">-->
-<!--    <div class="ui-dialog-content ui-widget-content">-->
-<!--        <p>-->
-<!--            <span class="ui-icon ui-icon-alert" style="float: left; margin: 0 7px 20px 0"></span>-->
-<!--            <label id="lblMessage">-->
-<!--            </label>-->
-<!--        </p>-->
-<!--    </div>-->
-<!--</div>-->
-
-
-</body>
-</html>

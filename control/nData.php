@@ -9,7 +9,8 @@
 <head>
     <?php
     require_once '../CommonPage/initializer.php';
-    error_reporting(E_ERROR);
+    checkUser($_SESSION["Username"]);
+    //
     ?>
     <script>
         $(function() {
@@ -100,13 +101,17 @@
         #firstResult{
             margin-bottom:25px;
         }
+         div#allButton {
+             float: right;
+             margin-top: -43px;
+         }
     </style>
 <body>
-    <?php
-    include '../CommonPage/header.php';
-    include '../CommonPage/nav.php';
+<?php
+include '../CommonPage/header.php';
+include '../CommonPage/nav.php';
 
-    ?>
+?>
 <div class="container-fluid">
     <?php
     include '../CommonPage/addPopUp.php'
@@ -116,73 +121,45 @@
 include '../CommonPage/addDetails.php';
 include '_selectDueDate.php';
 ?>
+<div class="ui segment">
+    <div id="dueDorm">
+        <form action="" method="post">
+            <select class="ui search dropdown" id="selectDueDate" name="DueDateSelector">
+                <?php
 
-<div id="dueDorm">
-    <form action="" method="post">
-        <select class="ui search dropdown" id="selectDueDate" name="DueDateSelector">
-            <?php
-            error_reporting(E_ERROR);
-            $DateList=array();
-            $DateList=array_unique($array);
-            echo "<option value='start'>Due Date</option>";
-            foreach ($DateList as $value) {
-                if($value>=getCurrentDate()){
-                echo '<option>'.$value.'</option> <br>';
-            }
-            }
-            ?>
-        </select>
-    </form>
-</div>
-
-<?php
-if($_SESSION["mailSent"]!=null){
-    if($_SESSION["mailSent"]==true){
-        /* echo '<div class="ui positive message" id="saveSuccess">
-                                     <p>Mail sent!!!</p>
-                                 </div>';*/
-        echo '<script>$.msgBox({
-                    title: "Mail",
-                    content: "Mail Sent Sucessfully!!",
-                    type: "alert",
-                    opacity: 0.5,
-                    buttons: [{ value: "Ok" }],
-                    success: function (result) {
-                        if (result == "Ok") {
-                        }
+                $DateList=array();
+                $DateList=array_unique($array);
+                echo "<option value='start'>Due Date</option>";
+                foreach ($DateList as $value) {
+                    if($value>=getCurrentDate()){
+                        echo '<option>'.$value.'</option> <br>';
                     }
-                });</script>';
-        $_SESSION["mailSent"]=null;
-    }
-    else{
-        echo '<div class="ui negative message" id="saveSuccess">
-                                    <p>Error while sending mail!!!</p>
-                                </div>';
-        $_SESSION["mailSent"]=null;
-    }
-}
-
-?>
-<div id="firstResult">
-    <div class="tableTop"><h1 style="text-align: center">Student List</h1></div>
-    <div class="container" style="border:1px solid #000000">
-        <table id="student-grid"  class="display ui celled table" cellspacing="0";width="100%"style="border:"1px solid black"">
-        <thead style="background-color: rgb(240, 240, 240)">
-        <tr>
-            <td>Student RollNo</td>
-            <td>Book Name</td>
-            <td>Issue Date</td>
-            <td>Due Date</td>
-        </tr>
-        </thead>
-        </table>
+                }
+                ?>
+            </select>
+        </form>
     </div>
 
-</div>
-<div id="result">
+    <div id="firstResult">
+        <div class="tableTop"><h1 style="text-align: center">Student List</h1></div>
+        <div class="container" style="border:1px solid #000000">
+            <table id="student-grid"  class="display ui celled table" cellspacing="0";width="100%"style="border:"1px solid black"">
+            <thead style="background-color: rgb(240, 240, 240)">
+            <tr>
+                <td>Student RollNo</td>
+                <td>Book Name</td>
+                <td>Issue Date</td>
+                <td>Due Date</td>
+            </tr>
+            </thead>
+            </table>
+        </div>
 
-</div>
+    </div>
+    <div id="result">
 
+    </div>
+</div>
 </body>
 
 </html>

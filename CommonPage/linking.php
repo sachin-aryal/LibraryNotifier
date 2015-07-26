@@ -26,7 +26,9 @@
     <script type="text/javascript" language="javascript" src="../js/jquery.dataTables.js"></script>
     <script type="text/javascript" language="javascript" src="../js/dataTables.responsive.min.js"></script>
     <script src="../js/custom.js"></script>
-<!--    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
+    <link href="../css/admin.css" rel="stylesheet"/>
+
+    <!--    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
 <!--    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>-->
 </head>
 <body>

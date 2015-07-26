@@ -1,7 +1,7 @@
 /**
  * Created by sachin on 7/10/2015.
  */
-function fnOpenNormalDialog(bookId) {
+function fnOpenNormalDialog(deleteItem) {
     $.msgBox({
         title: "Delete",
         content: "Are you sure?",
@@ -10,7 +10,7 @@ function fnOpenNormalDialog(bookId) {
         buttons: [{ value: "Yes" },{value: "No"}],
         success: function (result) {
             if (result == "Yes") {
-                deleteDetail(bookId);
+                deleteDetail(deleteItem);
             }else{
                 return false
             }
@@ -18,11 +18,11 @@ function fnOpenNormalDialog(bookId) {
     });
 }
 
-function deleteDetail(bookId){
+function deleteDetail(deleteItem){
     $.ajax({
         type: "GET",
         url: 'delete.php',
-        data: ({bookId:bookId}),
+        data: ({deleteItem:deleteItem}),
         success: function() {
             $.msgBox({
                 title: "Deleted",
@@ -55,4 +55,25 @@ function activeClass(id){
     }
     $("#"+id).addClass('active');
 }
+function removeAllActiveClass(){
+    $("#newData").removeClass('active');
+    $("#oldData").removeClass('active');
+    $("#home").removeClass('active');
+}
 
+function confirmDelete() {
+    $.msgBox({
+        title: "Delete All",
+        content: "Are you sure?",
+        type: "alert",
+        opacity: 0.5,
+        buttons: [{ value: "Yes" },{value: "No"}],
+        success: function (result) {
+            if (result == "Yes") {
+                return true;
+            }else{
+                return false;
+            }
+        }
+    });
+}

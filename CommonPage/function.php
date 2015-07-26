@@ -52,22 +52,21 @@ function sendMailAutomatically()
                 $emailId[] = $row1["Email"];
             }
         }
-        //error_reporting(E_ERROR);
+        //
        // session_start();
-        include_once '../CommonPage/linking.php';
         require_once '../CommonPage/initializer.php';
         $connection = is_connected();
         if ($connection == true) {
-            require_once('../AdminController/phpMailer/class.phpmailer.php');
-            require_once("../AdminController/phpMailer/class.smtp.php");
-            require '../AdminController/phpMailer/PHPMailerAutoload.php';
+            require_once('../control/phpMailer/class.phpmailer.php');
+            require_once("../control/phpMailer/class.smtp.php");
+            require '../control/phpMailer/PHPMailerAutoload.php';
             $mailer = new PHPMailer();
             $mailer->IsSMTP();
             $mailer->SMTPSecure = 'tls';
             $mailer->Host = 'smtp.gmail.com';
             $mailer->Port = 587;
             $mailer->Username = 'sachin.aryal@deerwalk.edu.np';
-            $mailer->Password = 'phenol69';
+            $mailer->Password = 'majuwasachin69';
             $mailer->SMTPAuth = true;
             $mailer->From = 'sachin.aryal@deerwalk.edu.np';
             $mailer->FromName = 'Library';
@@ -86,7 +85,7 @@ function sendMailAutomatically()
                 }
             }
         } else {
-            redirect_to('Show.php');
+            redirect_to('admin.php');
         }
     }
     else {

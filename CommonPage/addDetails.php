@@ -5,7 +5,7 @@
  * Date: 7/10/2015
  * Time: 1:54 PM
  */
-error_reporting(E_ERROR);
+
 require_once '../CommonPage/initializer.php';
 if (isset($_POST['saveDetails'])) {
     $rollNo=$_POST["rollNo"];

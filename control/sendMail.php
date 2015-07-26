@@ -1,7 +1,6 @@
 <?php
-error_reporting(E_ERROR);
+
 session_start();
-include_once '../CommonPage/linking.php';
 require_once '../CommonPage/initializer.php';
 $connection=is_connected();
 if($connection==true){
