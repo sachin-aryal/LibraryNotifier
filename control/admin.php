@@ -4,7 +4,6 @@
 <?php
 //
 include '../CommonPage/initializer.php';
-session_start();
 include 'autoMail.php';
 //Check For Login using checkUser function
 
@@ -47,8 +46,7 @@ if($_SESSION["deleteMessage"]==true) {
             </script>';
 }
 }
-
-
+$_SESSION["mailSent"]=true;
 if($_SESSION["mailSent"]!=null){
     if($_SESSION["mailSent"]==true){
         /* echo '<div class="ui positive message" id="saveSuccess">
@@ -202,8 +200,8 @@ if($_SESSION["mailSent"]!=null){
     <?php
 
     }else {
-        echo '<div class="ui blue message" id="saveFailed" style="width: 457px;">
-                                   <b> <p style="color: black;font-size:32px;">No any Duedate for today!!</p></b></div>';
+        echo '<div class="ui positive message" id="saveFailed" style="width: 457px;text-align: center;">
+                                   <b> <p style="color: black;font-size:20px;">No any Duedate for today!!</p></b></div>';
     }
 ?>
 </div>

@@ -1,6 +1,5 @@
 <?php
 include '../CommonPage/initializer.php';
-session_start();
 checkUser($_SESSION["Username"]);
 $deleteItem=$_GET["deleteItem"];
 if($deleteItem=='ajakoDate'){

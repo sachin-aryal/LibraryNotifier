@@ -1,9 +1,5 @@
-<?php
-session_start();
-checkUser($_SESSION["Username"])
-?>
 
-<div class="ui four item menu" style="background-color: #3573A3">
+<div class="ui four item menu" style="background-color: #E2E3E4">
     <a class="item" href="../control/admin.php" id="home"><i class="home icon"></i>
         Home
     </a>

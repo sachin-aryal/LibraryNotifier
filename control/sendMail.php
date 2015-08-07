@@ -1,7 +1,5 @@
 <?php
-
-session_start();
-require_once '../CommonPage/initializer.php';
+include '../CommonPage/initializer.php';
 $connection=is_connected();
 if($connection==true){
     require_once('phpMailer/class.phpmailer.php');
@@ -27,6 +25,9 @@ $totalMail=$_POST['mailNumber'];
     $mailer->AddAddress($studentMail);
     if($mailer->Send()){
         $_SESSION["mailSent"]=true;
+    }else{
+        $_SESSION["mailSent"]=false;
+        redirect_to('admin.php');
     }
 }
 redirect_to('admin.php');

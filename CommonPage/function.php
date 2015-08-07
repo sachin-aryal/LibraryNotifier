@@ -53,7 +53,6 @@ function sendMailAutomatically()
             }
         }
         //
-       // session_start();
         require_once '../CommonPage/initializer.php';
         $connection = is_connected();
         if ($connection == true) {
