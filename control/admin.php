@@ -46,7 +46,6 @@ if($_SESSION["deleteMessage"]==true) {
             </script>';
 }
 }
-$_SESSION["mailSent"]=true;
 if($_SESSION["mailSent"]!=null){
     if($_SESSION["mailSent"]==true){
         /* echo '<div class="ui positive message" id="saveSuccess">
